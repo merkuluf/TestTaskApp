@@ -1,0 +1,184 @@
+.avatar-parent {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 50%;
+
+}
+
+.avatar-parent .user-photo {
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+}
+
+.avatar-parent .upload-photo {
+    position: absolute;
+    background-color: rgba(145, 178, 215, 0.595);
+
+    padding: 25%;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0;
+    transition: .2s ease;
+    user-select: none;
+    border-radius: 50%;
+
+}
+
+.avatar-parent input {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    border-radius: 50%;
+    z-index: 2;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.avatar-parent:hover .upload-photo {
+    opacity: 1;
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10vh;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    min-width: 280px;
+    width: 90%;
+    max-width: 468px;
+    height: 100%;
+    min-height: 550px;
+    background-color: var(--xwhite-col);
+    box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.123);
+    gap: 5px;
+    position: relative;
+}
+
+.profile span {
+    margin: 0;
+    padding: 5px 10px;
+    border: 2px solid var(--grey-col);
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.exit-button {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.123);
+}
+
+.save-button {
+    position: absolute;
+    bottom: -10px;
+    right: -10px;
+    box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.123);  
+}
+
+.button-holder {
+
+    width: 95%;
+    padding: 5px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.transparent-button {
+    background-color: transparent;
+    border: 0px solid transparent;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: .2s ease;
+}
+
+.transparent-button:hover {
+    box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.123);
+}
+
+.icon {
+    user-select: none;
+    pointer-events: none;
+}
+
+.editing-field {
+    border: 0px solid transparent;
+    background-color: var(--input-col);
+    border-radius: 0px;
+}
+
+.editing-field::placeholder {
+    color: var(--button-col);
+}
+
+.pass-first {
+    margin-right: 5px;
+}
+
+
+.user-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.people {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+}
+
+.profile-button {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+}
+
+.people-list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 30px;
+    gap: 20px;
+    padding-top: 5rem;
+}
+
+.user-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--xwhite-col);
+    box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.123);
+    width: 200px;
+    padding: 20px 0px 0px;
+    border-radius: 12px;
+
+}
+
