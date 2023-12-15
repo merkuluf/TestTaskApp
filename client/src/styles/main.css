@@ -2,6 +2,8 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: var(--blue-col);
+  min-height: 100vh;
 }
 
 .inputs {
@@ -16,6 +18,7 @@ main {
   margin-bottom: 10vh;
   padding-top: 2rem;
   padding-bottom: 2rem;
+  border-radius: 12px;
   min-width: 280px;
   width: 90%;
   max-width: 468px;
@@ -24,34 +27,39 @@ main {
   gap: 10px;
 }
 
+.form-title {
+  font-size: 2rem;
+  letter-spacing: -1px;
+  font-weight: 500;
+  margin: 1rem;
+}
 
 
 .form-holder span {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 5px;
+  gap: 3px;
   width: 90%;
-  /* background-color: var(--grey-col); */
 }
 
 .form-holder span label {
   display: flex;
   flex-direction: column;
-  width: calc(100% - 15px);
-  padding-left: 15px;
+  width: 100%;
+  padding-left: 24px;
   align-items: left;
 }
 
 
 input {
-  width: 97%!important;
+  width: 92%!important;
 }
 select, input {
-  width: 100%;
-  padding: 5px;
-  border: 2px solid var(--grey-col);
-  border-radius: 5px;
+  width: calc(100% - 16px);
+  padding: 8px;
+  border: 1px solid var(--blue-col);
+  border-radius: 16px;
   background-color: var(--xwhite-col);
   color: var(--dark-col);
   font-size: 1rem;
@@ -62,15 +70,11 @@ select, input {
 input:hover {
   border-color: #3498db; 
 }
-
-
 input:focus {
   outline: none;
   border-color: #2980b9; 
   box-shadow: 0 0 5px rgba(41, 128, 185, 0.8); 
 }
-
-
 input:disabled {
   background-color: #d5dbdb; 
   color: #bdc3c7; 
@@ -78,32 +82,24 @@ input:disabled {
 }
 
 
-input::placeholder {
-  color: var(--dkgrey-col);
-}
-
-
-input:focus {
-  box-shadow: 0 0 5px rgba(41, 128, 185, 0.8); 
-}
-
 .xbutton {
   display: inline-block;
-  padding: 10px 20px;
+  padding: 15px 20px;
   font-size: 16px;
+  width: 100%;
   font-weight: bold;
   text-align: center;
   text-decoration: none;
   color: #fff;
-  background-color: #333;
-  border-radius: 5px;
+  background-color: var(--blue-col);
+  border-radius: 32px;
   transition: background-color 0.3s ease-in-out;
   border: 0px solid transparent;
   cursor: pointer;
 }
 
 .xbutton:hover {
-  background-color: #555;
+  background-color: var(--blue-accent-col);
 }
 
 .linkbutton {

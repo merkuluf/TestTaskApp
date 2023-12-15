@@ -64,6 +64,7 @@
     width: 90%;
     max-width: 468px;
     height: 100%;
+    border-radius: 12px;
     min-height: 550px;
     background-color: var(--xwhite-col);
     box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.123);
@@ -74,7 +75,9 @@
 .profile span {
     margin: 0;
     padding: 5px 10px;
-    border: 2px solid var(--grey-col);
+    height: 30px;
+    border: 1px solid var(--blue-col);
+    border-radius: 32px;
     width: 90%;
     display: flex;
     flex-direction: row;
@@ -82,28 +85,34 @@
     justify-content: space-between;
 }
 
-.exit-button {
+.logout-button {
     position: absolute;
-    top: -10px;
-    right: -10px;
-    box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.123);
+    top: 10px;
+    right: 10px;
+    background-color: var(--xwhite-col)!important;
+    padding: 10px;
+    box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.05);  
 }
 
-.save-button {
-    position: absolute;
-    bottom: -10px;
-    right: -10px;
-    box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.123);  
-}
 
 .button-holder {
 
     width: 95%;
-    padding: 5px 10px;
+
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     justify-content: flex-end;
+}
+
+.save-button {
+    width: 100%;
+    background-color: var(--green-col);
+}
+
+.save-button:hover {
+    background-color: var(--green-accent-col);
+
 }
 
 .transparent-button {
@@ -125,12 +134,12 @@
 
 .editing-field {
     border: 0px solid transparent;
-    background-color: var(--input-col);
     border-radius: 0px;
+    padding: 0;
 }
 
 .editing-field::placeholder {
-    color: var(--button-col);
+    color: var(--blue-col);
 }
 
 .pass-first {
@@ -155,8 +164,9 @@
 
 .profile-button {
     position: absolute;
+    width: fit-content;
     top: 20px;
-    left: 30px;
+    left: 20px;
 }
 
 .people-list {
@@ -167,7 +177,7 @@
     flex-wrap: wrap;
     padding: 30px;
     gap: 20px;
-    padding-top: 5rem;
+    padding-top: 6rem;
 }
 
 .user-card {
@@ -182,3 +192,15 @@
 
 }
 
+
+.people-button {
+    background-color: var(--xwhite-col);
+    color: var(--dark-col);
+    position: absolute;
+    bottom: -60px;
+    padding: 12px 0px;
+}
+
+.people-button:hover {
+    background-color: var(--grey-col);
+}

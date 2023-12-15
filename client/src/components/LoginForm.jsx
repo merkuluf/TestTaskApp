@@ -15,6 +15,9 @@ function LoginForm({ setIsRegistered }) {
         setIsRegistered(false)
     }
 
+    const user = useSelector(state => state.user)
+    console.log(user)
+
 
     const mailRef = useRef()
     const passRef = useRef()

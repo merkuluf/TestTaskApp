@@ -6,6 +6,7 @@ import fetchPhoto from '../utils/fetchPhoto'
 import { USER } from '../redux/actionTypes'
 import edit_svg from '../static/edit.svg'
 import close_svg from '../static/close.svg'
+import logout_svg from '../static/logout.svg'
 import handlePhotoUpload from '../utils/photoUpload'
 import { validatePassword, validateEmail } from '../utils/validation'
 const SERVER_URL = import.meta.env.VITE_SERVER_URL;
@@ -17,7 +18,9 @@ function Profile() {
 	const navigate = useNavigate()
 
 	let user = useSelector(state => state.user)
+
 	useEffect(() => {
+		console.log(user)
 		if (user.username === null) {
 			let localstorage_user = localStorage.getItem('user')
 			let user_json = JSON.parse(localstorage_user)
@@ -146,7 +149,10 @@ function Profile() {
 		<main>
 			<div className='profile'>
 				<h1>Мой профиль</h1>
-				<button onClick={handleLogOut} className='xbutton exit-button'>Выйти</button>
+				<button onClick={handleLogOut} 
+					className='transparent-button logout-button'>
+					<img className='icon' src={logout_svg}></img>
+				</button>
 				<PhotoSelect photo={photo} setPhoto={setPhoto} />
 				<br />
 				<span>{user.username}</span>
@@ -188,14 +194,14 @@ function Profile() {
 						</button>
 					</div>
 				}
-				<br />
-				{changesExist && <button onClick={handleSaveChanges} className='xbutton save-button'>Сохранить изменения</button>}
+
+				<div className='button-holder'>
+					{changesExist && <button onClick={handleSaveChanges} className='xbutton save-button'>Сохранить изменения</button>}
+				</div>
+			<Link to='/people' className='xbutton people-button'>Смотреть профили</Link>
 			</div>
-			<br /><br />
-			<Link to='/people' className='xbutton'>Смотреть профили</Link>
 		</main>
 	)
 }
 
 export default Profile
-

@@ -7,9 +7,10 @@
   --xwhite-col: #f1f1f1;
   --dark-col: #141414;
   --ltdark-col: #464646;
-  --button-col: #1a5893;
-  --hover-col: #2980b9; 
-  --active-col: #1f618d; 
+  --blue-col: #2980b9; 
+  --blue-accent-col: #3b93ce; 
+  --green-col: #5dad20; 
+  --green-accent-col: #73c435; 
   --grey-col: #bdc3c7; 
   --input-col: #e3e3e3; 
   --dkgrey-col: #313234; 
@@ -27,12 +28,3 @@ body {
 }
 
 
-
-/* display: flex;
-place-items: center;
-min-width: 320px;
-min-height: 100vh;
-max-width: 1280px;
-margin: 0 auto;
-padding: 2rem;
-text-align: center; */

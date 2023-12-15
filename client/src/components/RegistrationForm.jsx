@@ -3,8 +3,9 @@ import PhotoSelect from '../components/PhotoSelect'
 import handlePhotoUpload from '../utils/photoUpload'
 import { useNavigate } from 'react-router-dom'
 import profile_png from '../static/profile.png'
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
 import { validateEmail, validatePassword, validateUsername } from '../utils/validation'
+import { USER } from '../redux/actionTypes'
 const SERVER_URL = import.meta.env.VITE_SERVER_URL;
 
 
@@ -12,6 +13,7 @@ const SERVER_URL = import.meta.env.VITE_SERVER_URL;
 function RegistrationForm({ setIsRegistered }) {
 
     const navigate = useNavigate()
+    const dispatch = useDispatch()
 
     useEffect(() => {
         let localstorage_user = localStorage.getItem('user')
@@ -93,6 +95,8 @@ function RegistrationForm({ setIsRegistered }) {
                     return alert(data.message)
                 }
                 setIsRegistered(true)
+                alert('Вы успешно зарегистрированы!')
+                // dispatch({type: USER.SET, payload: data})
                 console.log(data, '<<')
             })
             .catch(error => {
@@ -107,7 +111,7 @@ function RegistrationForm({ setIsRegistered }) {
     return (
         <div className='form-holder'>
 
-            <h2>Регистрация</h2>
+            <p className='form-title'>Регистрация</p>
 
             <PhotoSelect setPhoto={setPhoto} photo={photo} />
 
