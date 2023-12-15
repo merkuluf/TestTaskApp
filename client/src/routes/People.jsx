@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 const SERVER_URL = import.meta.env.VITE_SERVER_URL;
 import AvatarDisplay from '../components/AvatarDisplay';
 import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function People() {
 
@@ -37,7 +38,7 @@ function People() {
 
     return (
         <div className='people'>
-            <button onClick={handleGoBack} className='xbutton profile-button'>В Профиль</button>
+            <Link to='/account' className='xbutton profile-button'>В Профиль</Link>
             <div className='people-list'>
                 {usersExist &&
                 users.map(user => {

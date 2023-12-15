@@ -160,13 +160,21 @@
     justify-content: center;
     width: 100%;
     position: relative;
+    background-color: var(--blue-col);
+    min-height: 100vh;
 }
 
 .profile-button {
+    background-color: var(--xwhite-col);
+    color: var(--dark-col);
     position: absolute;
     width: fit-content;
     top: 20px;
     left: 20px;
+}
+
+.profile-button:hover {
+    background-color: var(--grey-col);
 }
 
 .people-list {
