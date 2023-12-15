@@ -96,7 +96,6 @@ function RegistrationForm({ setIsRegistered }) {
                 }
                 setIsRegistered(true)
                 alert('Вы успешно зарегистрированы!')
-                // dispatch({type: USER.SET, payload: data})
                 console.log(data, '<<')
             })
             .catch(error => {

@@ -16,7 +16,7 @@ exports.fetchAllUsers = async () => {
 
     } catch (error) {
       console.error('Error fetching users:', error);
-      throw error; // You may want to handle or log the error appropriately
+      throw error; 
     }
 }
 

@@ -10,10 +10,10 @@ function AvatarDisplay({ filename }) {
     const fetchAvatar = async () => {
       try {
         const response = await axios.get(SERVER_URL + `/download?filename=${filename}`, {
-          responseType: 'arraybuffer', // Important for handling binary data
+          responseType: 'arraybuffer', 
         });
 
-        // Create a Blob from the received image data
+        // Create a Blob 
         const blob = new Blob([response.data], { type: 'image/jpeg' });
 
         // Create a data URL from the Blob
@@ -25,7 +25,7 @@ function AvatarDisplay({ filename }) {
     };
 
     fetchAvatar();
-  }, []); // Run this effect only once when the component mounts
+  }, []); 
 
   return (
       <img className='user-avatar' src={avatarSrc} alt='User Avatar' />

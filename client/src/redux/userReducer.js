@@ -9,17 +9,17 @@ const initialState = {
 };
 
 const userReducer = (state = initialState, action) => {
-	switch (action.type) {
-		case USER.SET:
-            let userObj = {...action.payload, birthday: action.payload.birthday.split('T')[0]}
+    switch (action.type) {
+        case USER.SET:
+            let userObj = { ...action.payload, birthday: action.payload.birthday.split('T')[0] }
             localStorage.setItem('user', JSON.stringify(userObj))
             return userObj
         case USER.DELETE:
             localStorage.removeItem('user')
             return initialState
-		default:
-			return state;
-	}
+        default:
+            return state;
+    }
 };
 
 export default userReducer;
